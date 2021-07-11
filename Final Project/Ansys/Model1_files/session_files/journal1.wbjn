@@ -1,0 +1,113 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="Nitinol")
+matlProp1 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp2 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["80000 [MPa]"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.43"]])
+matlProp3 = matl1.CreateProperty(
+    Name="Shape Memory Effect",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp3.SetVariableProperty(
+    VariableName="Hardening Parameter",
+    Property="Unit",
+    Value="MPa")
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Hardening Parameter"],
+    Values=[["3000 [MPa]"]])
+matlProp3.SetData(
+    Variables=["Reference Temperature"],
+    Values=[["70 [C]"]])
+matlProp3.SetVariableProperty(
+    VariableName="Elastic Limit",
+    Property="Unit",
+    Value="MPa")
+matlProp3.SetData(
+    Variables=["Elastic Limit"],
+    Values=[["7.8886090522101181E-31 [MPa]"]])
+matlProp3.SetData(
+    Variables=["Elastic Limit"],
+    Values=[["120 [MPa]"]])
+matlProp3.SetVariableProperty(
+    VariableName="Temperature Scaling Parameter",
+    Property="Unit",
+    Value="MPa C^-1")
+matlProp3.SetData(
+    Variables=["Temperature Scaling Parameter"],
+    Values=[["7.8886090522101181E-31 [MPa C^-1]"]])
+matlProp3.SetData(
+    Variables=["Temperature Scaling Parameter"],
+    Values=[["5 [MPa C^-1]"]])
+matlProp3.SetVariableProperty(
+    VariableName="Maximum Transformation Strain",
+    Property="Unit",
+    Value="mm mm^-1")
+matlProp3.SetData(
+    Variables=["Maximum Transformation Strain"],
+    Values=[["7.8886090522101181E-31 [mm mm^-1]"]])
+matlProp3.SetData(
+    Variables=["Maximum Transformation Strain"],
+    Values=[["0.06 [mm mm^-1]"]])
+matlProp3.SetVariableProperty(
+    VariableName="Martensite Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp3.SetData(
+    Variables=["Martensite Modulus"],
+    Values=[["7.8886090522101181E-31 [MPa]"]])
+matlProp3.SetData(
+    Variables=["Martensite Modulus"],
+    Values=[["30000 [MPa]"]])
+matlProp3.SetData(
+    Variables=["Lode Dependency Parameter"],
+    Values=[["0.15"]])
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["6.46E-06 [kg m^-3]"]])
+matlProp1.SetVariableProperty(
+    VariableName="Density",
+    Property="Unit",
+    Value="kg mm^-3")
+matlProp1.SetData(
+    Variables=["Density"],
+    Values=[["6.46E-15 [kg mm^-3]"]])
+matlProp1.SetData(
+    Variables=["Density"],
+    Values=[["6.46E-06 [kg mm^-3]"]])
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="C:/Users/sharm/Downloads/Edit_11.IGS")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+model1.Edit()
+model1.Exit()
+geometry1.SetFile(FilePath="C:/Users/sharm/Downloads/Edit_11.SLDPRT")
+modelComponent1.Refresh()
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)

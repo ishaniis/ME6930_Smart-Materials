@@ -1,0 +1,7 @@
+! ANSYS COMMAND: (null)
+! ANSYS PARAMETERS:  -b nolist -dis -s noread -np 6 -p ansys
+! ANSYS JOB DIR: Not Used
+/batch,nolist
+/input,'ds.dat'
+fini
+/exit,nosa

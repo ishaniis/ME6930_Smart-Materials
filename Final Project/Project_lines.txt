@@ -1,0 +1,76 @@
+C.1 Cover Page 
+
+0.1 Acknowledgements 
+
+0.2 Index 
+
+O.3 Abstract
+
+------------------------------------
+A. Introduction
+
+- Aerodynamics of Cars
+- Drag Force
+- Lift Force
+- Vehicle Dynamics & Stability connectio with the Drag Force
+
+- Concept of Wing
+- Concept of Airfoil
+- Types of NACA Airfoil
+- Types of Wing 
+- - Front
+- - Rear (1,2 and 3) 
+- - - Their functional usage ?
+
+- Advent of Rear Wing 
+- - How Useful it is ?  
+- Force Vector Diagram
+
+- Evolution in the Wing Design 
+- How Wing designs have been modified over the years ?
+- Concept of Actuation
+- Search for options to replace actuation 
+- - To reduce weight -  unsprung mass, better air drag:lift rate 
+
+- Concept of Morphing 
+- Concept of Morphing in Aerospace Structures 
+- - Brief Discussion in Kiragami & Origami 
+
+- Concept of Shape memory Alloys
+- Overview Nitinol 
+- Properties Table 
+- - Physical Properties
+- - Mechanical Properties 
+- Use-cases of Shape Memory Alloys
+- Use of Shape memory alloys as Actuators  
+
+- Project Objective & Proposal 
+- Basic Design 
+- Design Variables & Design Equations 
+- - Concepts:
+- - - Concept A: of Replacing Actuators using SMA
+- - - Concept B: Making Skins out of Shape Memory Alloy   
+
+- Wing Design Hand Calculations & Equations (Paper) 
+- Research Pedagogy 
+- Static Structural Scheme: Load Deflection Observed (Pressure Force) 
+- - Two-Axis Loading 
+- - Multi Axial Loading (Windy Day)  
+
+- Static Structural Scheme (Nitinol) 
+- Multi Axial Loading (Nitinol)
+- - Direct Stress
+- - Directional Deformation
+- - Total Deformation
+- - Von Mises Stress 
+- - Fatigue Response (Cyclic Loading) 
+- - Principal Stresses ( Maximum and Minimum) 
+- - Von Mises Strain 
+
+- Fluid Structural Scheme 
+
+- Results Discussion & Conclusion 
+- Inferences 
+- Future Scope of Research
+ 
+B. References
